@@ -21,21 +21,20 @@ const config = {
       TodoRouterDir: `${src}/js/todoRouter`,
       TodoVuexDir: `${src}/js/todoVuex`,
       VuexSample: `${src}/js/todoVuex_sample`,
-    }
+    },
   },
-  plugins: [
-    new VueLoaderPlugin()
-  ],
+  plugins: [new VueLoaderPlugin()],
   devServer: {
-    open: true,
+    // open: true,
     inline: true,
     hot: true,
     port: 8080,
     contentBase: dist,
     // historyApiFallback: true,
+    open: 'Google Chrome',
   },
   entry: {
-    index: `${src}/js/index.js`
+    index: `${src}/js/index.js`,
   },
   output: {
     filename: 'js/[name].js',
@@ -58,7 +57,7 @@ const config = {
       {
         test: /\.vue$/,
         exclude: /node_modules/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
       },
       {
         test: /\.(css|sass|scss)$/,
@@ -67,29 +66,27 @@ const config = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: [
-                require('autoprefixer')({ grid: true })
-              ]
-            }
+              plugins: [require('autoprefixer')({ grid: true })],
+            },
           },
           {
             loader: 'sass-loader',
             options: {
               outputStyle: 'expanded',
-              sourceMap: true
-            }
-          }
-        ]
-      }
-    ]
-  }
-}
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
 
 export default config;
