@@ -30,7 +30,13 @@ const config = {
     hot: true,
     port: 8080,
     contentBase: dist,
-    // historyApiFallback: true,
+
+    /**
+     * When using the HTML5 History API,
+     * the index.html page will likely have to be served in place of any 404 responses.
+     * Enable devServer.historyApiFallback by setting it to true:
+     */
+    historyApiFallback: true,
     open: 'Google Chrome',
   },
   entry: {
