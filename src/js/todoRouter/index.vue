@@ -9,6 +9,15 @@
 
 <script>
 export default {
+
+  /**
+   * required 'abstract' mode.
+   *
+   * provide initialize status to vue-router.
+   */
+  // mounted() {
+  //   this.$router.replace('/');
+  // },
 };
 </script>
 

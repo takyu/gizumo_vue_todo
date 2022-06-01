@@ -111,9 +111,9 @@ export default {
       if (!this.filteredTodos.length) this.setEmptyMessage();
     },
     setEmptyMessage() {
-      if (this.todoFilter === 'completedTodo') {
+      if (this.todoFilter === 'completedTodos') {
         this.emptyMessage = '完了済みのやることリストはありません。';
-      } else if (this.todoFilter === 'incompleteTodo') {
+      } else if (this.todoFilter === 'incompleteTodos') {
         this.emptyMessage = '未完了のやることリストはありません。';
       } else {
         this.emptyMessage = 'やることリストには何も登録されていません。';
