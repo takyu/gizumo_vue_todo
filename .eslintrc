@@ -3,18 +3,35 @@
   "parserOptions": {
     "parser": "babel-eslint"
   },
-  "extends": ["airbnb-base"],
-  "plugins": ["vue"],
+  "extends": [
+    "airbnb-base"
+  ],
+  "plugins": [
+    "vue"
+  ],
   "settings": {
     "import/resolver": {
       "alias": {
         "map": [
-          ["TodoDir", "./src/js/todo"],
-          ["TodoRouterDir", "./src/js/todoRouter"],
-          ["TodoVuexDir", "./src/js/todoVuex"],
-          ["VuexSample", "./src/js/todoVuex_sample"]
+          [
+            "TodoDir",
+            "./src/js/todo"
+          ],
+          [
+            "TodoRouterDir",
+            "./src/js/todoRouter"
+          ],
+          [
+            "TodoVuexDir",
+            "./src/js/todoVuex"
+          ],
+          [
+            "VuexSample",
+            "./src/js/todoVuex_sample"
+          ]
         ],
-        "extensions": ['.vue', '.js', '.jsx', '.json']
+        "extensions": ['.vue', '.js', '.jsx', '.json'
+        ]
       }
     }
   },
@@ -22,12 +39,15 @@
     "no-new": "off",
     "no-console": 1,
     "no-control-regex": "off",
-    "max-len": ["error", {
-      "code": 90,
-      "ignoreComments": true,
-      "ignoreTrailingComments": true,
-      "ignoreUrls": true
-    }],
+    "max-len": [
+      "error",
+      {
+        "code": 90,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true
+      }
+    ],
     "no-irregular-whitespace": [
       "error",
       {
@@ -36,10 +56,15 @@
       }
     ],
     "import/no-named-as-default": "off",
-    "no-param-reassign": ["error", {
-      "props": true,
-      "ignorePropertyModificationsFor": ["state"]
-    }],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "state"
+        ]
+      }
+    ],
     "vue/singleline-html-element-content-newline": "off",
     "vue/max-attributes-per-line": [
       "error",
