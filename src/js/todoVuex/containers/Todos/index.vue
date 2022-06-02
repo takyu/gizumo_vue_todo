@@ -42,7 +42,11 @@ export default {
   },
   watch: {
     todos(todos) {
-      if (!todos.length) this.$store.dispatch('setEmptyMessage', this.todoFilter);
+      if (!todos.length) {
+        this.$store.dispatch('setEmptyMessage', this.todoFilter);
+        return;
+      }
+      this.$store.commit('hideEmpty');
     },
     $route(to) {
       this.$store.dispatch('setTodoFilter', to.name);

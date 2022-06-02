@@ -30,7 +30,11 @@
             "./src/js/todoVuex_sample"
           ]
         ],
-        "extensions": ['.vue', '.js', '.jsx', '.json'
+        "extensions": [
+          ".vue",
+          ".js",
+          ".jsx",
+          ".json"
         ]
       }
     }
