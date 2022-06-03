@@ -170,15 +170,18 @@ const store = new Vuex.Store({
       commit('initTargetTodo');
     },
     deleteTodo({ commit }, todoId) {
-      axios
-        .delete(`http://localhost:3000/api/todos/${todoId}`)
-        .then(({ data }) => {
-          commit('deleteTodo', data);
-          commit('hideError');
-        })
-        .catch((err) => {
-          commit('showError', err.response);
-        });
+      return new Promise((resolve) => {
+        axios
+          .delete(`http://localhost:3000/api/todos/${todoId}`)
+          .then(({ data }) => {
+            commit('deleteTodo', data);
+            commit('hideError');
+            resolve();
+          })
+          .catch((err) => {
+            commit('showError', err.response);
+          });
+      });
       // 必要があれば処理
     },
   },
